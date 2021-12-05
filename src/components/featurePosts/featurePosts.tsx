@@ -63,10 +63,10 @@ export const TopFeaturePost: FunctionComponent<PostSnippet> = ({
           alt={imgAlt || title}
           className="h-144 w-full object-cover rounded"
         />
-        <h1 className="text-4xl text-center my-3">{title}</h1>
-        <div className="mb-16 max-w-prose mx-auto text-center text-lg text-gray-600">
+        {/* <h1 className="text-4xl text-center my-3">{title}</h1> */}
+        {/* <div className="mb-16 max-w-prose mx-auto text-center text-lg text-gray-600">
           {summary}
-        </div>
+        </div> */}
       </a>
     </div>
   );
@@ -78,7 +78,7 @@ export const FeaturePosts: FunctionComponent<FeaturePosts> = ({
   const [topPost, ...otherFeature] = featurePosts;
   return (
     <div className="relative py-6">
-      <div className="relative max-w-7xl mx-auto">
+      <div className="relative mx-auto">
         <TopFeaturePost {...topPost} />
         <h2 className="text-2xl leading-9 tracking-tight font-semibold text-gray-900 sm:leading-10 text-center mt-3 mb-8">
           Featured Posts

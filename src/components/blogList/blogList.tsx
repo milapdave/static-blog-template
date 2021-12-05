@@ -18,7 +18,7 @@ export const BlogList: FunctionComponent<BlogList> = ({
   const next = hasNext ? `/page/${page + 1}/` : undefined;
   return (
     <div className="relative py-6">
-      <div className="relative max-w-7xl mx-auto">
+      <div className="relative mx-auto">
         <h1 className="text-2xl leading-9 tracking-tight font-semibold text-gray-900 sm:leading-10 text-center my-12">
           Page {page}
         </h1>

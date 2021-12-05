@@ -59,7 +59,7 @@ export const Layout: FunctionComponent = ({ children }) => {
       </Helmet>
       <Header menuItems={menuItems} logo={logo} />
       <div className="min-h-screen">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">{children}</div>
+        <div className="mx-auto px-4 sm:px-6 lg:px-8">{children}</div>
       </div>
       <Footer {...footer} />
     </>
