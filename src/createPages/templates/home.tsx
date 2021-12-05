@@ -39,7 +39,7 @@ export const pageQuery = graphql`
       }
     }
     recentPosts: allMarkdownRemark(
-      limit: 10
+      limit: 100
       sort: { fields: [frontmatter___publishedDate], order: DESC }
     ) {
       edges {
@@ -118,7 +118,7 @@ const Home: FunctionComponent<Home> = ({ data }) => {
       <Layout>
         <FeaturePosts featurePosts={featuredPostData} />
         <RecentPosts recentPosts={recentPostData} />
-        <Pagination next="/page/2" />
+        {/* <Pagination next="/page/2" /> */}
       </Layout>
     </>
   );

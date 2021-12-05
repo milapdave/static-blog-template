@@ -4,7 +4,7 @@ import { withPrefix } from "gatsby";
 import { useSiteMetadata } from "../hooks/useSiteMetadata";
 import { Header, MenuItem } from "./header";
 import { Footer } from "./footer";
-import icon from "../../../static/logo.png";
+import icon from "../../../static/logo.svg";
 
 const logo = <img className="w-auto h-15" src={icon} alt="Workflow" />;
 const menuItems: MenuItem[] = [
@@ -19,10 +19,10 @@ const menuItems: MenuItem[] = [
 ];
 
 const footer = {
-  copyrightOwner: "GEEK SG",
-  linkedin: "https://www.linkedin.com/in/raymondyeh/",
-  github: "https://github.com/yehjxraymond",
-  instagram: "https://www.instagram.com/geek.sg/",
+  copyrightOwner: "Liimart",
+  // linkedin: "https://www.linkedin.com/in/liimart/",
+  // github: "https://github.com/yehjxraymond",
+  instagram: "https://www.instagram.com/liimart",
 };
 
 export const Layout: FunctionComponent = ({ children }) => {

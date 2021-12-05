@@ -1,7 +1,6 @@
 import React, { FunctionComponent } from "react";
 import Image from "gatsby-image";
 import { PostSnippet } from "../../types";
-
 export interface PostList {
   posts: PostSnippet[];
 }
@@ -15,13 +14,13 @@ export const PostListItem: FunctionComponent<PostSnippet> = ({
   summary,
 }) => {
   return (
-    <div className="flex mb-16 sm:mb-28 flex-col sm:flex-row">
-      <div className="flex-shrink-0 mr-0 sm:mr-8 mb-6 sm:mb-0">
+    <div className="flex px-14 flex-col rounded-lg overflow-hidden  mb-16 sm:mb-16">
+      <div className="mb-6 blogthum">
         <a href={href}>
           <Image
             fluid={img}
             alt={imgAlt || title}
-            className="h-48 w-full sm:w-48 xl:h-52 xl:w-52 object-cover rounded-sm"
+            className="w-full object-cover rounded-sm"
           />
         </a>
       </div>
@@ -41,15 +40,16 @@ export const PostListItem: FunctionComponent<PostSnippet> = ({
               </span>
             ))}
           </div>
-          <a href={href}>
+          {/* <a href={href}>
             <p className="mt-3 text-base leading-6 text-gray-500">{summary}</p>
-          </a>
+          </a> */}
+          <p dangerouslySetInnerHTML={{ __html: summary }} />
         </div>
-        <div className="mt-4">
+        {/* <div className="mt-4">
           <a href={href} className="block font-medium tracking-wide">
             Read More
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );
@@ -57,7 +57,7 @@ export const PostListItem: FunctionComponent<PostSnippet> = ({
 
 export const PostList: FunctionComponent<PostList> = ({ posts }) => {
   return (
-    <div className="mt-3">
+    <div className="mt-3 grid gap-5 xl:gap-10 max-w-lg mx-auto grid-cols-1 md:grid-cols-3 md:max-w-none">
       {posts.map((post, index) => (
         <PostListItem {...post} key={index} />
       ))}

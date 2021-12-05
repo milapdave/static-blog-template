@@ -7,3 +7,14 @@
 }
 
 @tailwind utilities;
+
+
+.blogthum .gatsby-image-wrapper{
+  height: 480px;
+}
+.blogthum img{
+  width: 100%;
+}
+.blogthum a{
+  display: block;
+}
