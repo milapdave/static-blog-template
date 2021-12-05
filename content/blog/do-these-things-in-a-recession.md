@@ -2,10 +2,7 @@
 template: blog-post
 title: Do These Things in a Recession and You’ll Make Extra Money to Relax
 publishedDate: 2020-06-14T12:00:28.345Z
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-  eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl vel pretium
-  lectus quam. Enim neque volutpat ac tincidunt vitae semper quis lectus. At
-  erat pellentesque adipiscing commodo elit at.
+description: <a>asdasdasd</a>
 featured: true
 img: ../../static/images/girl-on-phone.jpeg
 imgAlt: Scroll scroll scroll...
