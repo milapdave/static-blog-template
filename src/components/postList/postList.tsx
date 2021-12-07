@@ -10,6 +10,7 @@ export const PostListItem: FunctionComponent<PostSnippet> = ({
   img,
   imgAlt,
   title,
+  url,
   tags,
   summary,
 }) => {
@@ -40,6 +41,7 @@ export const PostListItem: FunctionComponent<PostSnippet> = ({
               </span>
             ))}
           </div>
+          {console.log(url, 'url')}
           {/* <a href={href}>
             <p className="mt-3 text-base leading-6 text-gray-500">{summary}</p>
           </a> */}

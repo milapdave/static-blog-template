@@ -15,7 +15,7 @@ export interface PostSnippet {
   imgAlt: string;
   tags: string[];
   publishedDate: Date;
-  url: string[];
+  url: string;
 }
 
 export interface BlogPost {
@@ -29,5 +29,5 @@ export interface BlogPost {
   slug: string;
   tags: string[];
   content: JSX.Element;
-  url: string[];
+  url: string;
 }

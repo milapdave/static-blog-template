@@ -67,7 +67,6 @@ export const pageQuery = graphql`
     }
   }
 `;
-
 interface Post {
   node: {
     id: string;
@@ -80,6 +79,7 @@ interface Post {
       imgAlt: string;
       description: string;
       publishedDate: string;
+      url: string;
       img: { childImageSharp: { fluid: FluidObject } };
     };
   };
@@ -99,6 +99,7 @@ interface Home {
 }
 
 const Home: FunctionComponent<Home> = ({ data }) => {
+  console.log(data,'data')
   const mapPostData = ({ node }: { node: Post["node"] }) => ({
     title: node.frontmatter.title,
     summary: node.frontmatter.description,
@@ -107,6 +108,7 @@ const Home: FunctionComponent<Home> = ({ data }) => {
     imgAlt: node.frontmatter.imgAlt,
     tags: node.frontmatter.tags,
     publishedDate: new Date(node.frontmatter.publishedDate),
+    url: node.frontmatter.url
   });
   const featuredPostData: PostSnippet[] = data.featuredPosts.edges.map(
     mapPostData
@@ -115,6 +117,7 @@ const Home: FunctionComponent<Home> = ({ data }) => {
   return (
     <>
       <SEO title="Home" image="/logo.png"/>
+      {console.log(recentPostData,'recentPostData')}
       <Layout>
         <FeaturePosts featurePosts={featuredPostData} />
         <RecentPosts recentPosts={recentPostData} />
