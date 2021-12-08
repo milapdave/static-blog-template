@@ -1,7 +1,7 @@
 const siteName = "Sample Blog";
 const siteShortName = "Sample Blog";
 const siteUrl = "https://geek.sg/";
-const siteDescription = "Sample blog template";
+const siteAffiliateUrl = "Sample blog template";
 const siteKeyword = "";
 const siteLogo = "logo.png";
 const siteLogoFolder = `static/${siteLogo}`;
@@ -10,7 +10,7 @@ module.exports = {
   siteMetadata: {
     title: siteName,
     siteUrl,
-    description: siteDescription,
+    affiliateUrl: siteAffiliateUrl,
   },
   plugins: [
     "gatsby-plugin-sitemap",
@@ -60,7 +60,7 @@ module.exports = {
       options: {
         name: siteName,
         short_name: siteShortName,
-        description: siteDescription,
+        affiliateUrl: siteAffiliateUrl,
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
         display: `standalone`,

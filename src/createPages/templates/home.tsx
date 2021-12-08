@@ -25,7 +25,7 @@ export const pageQuery = graphql`
             tags
             title
             imgAlt
-            description
+            affiliateUrl
             publishedDate
             img {
               childImageSharp {
@@ -52,7 +52,7 @@ export const pageQuery = graphql`
             tags
             title
             imgAlt
-            description
+            affiliateUrl
             publishedDate
             img {
               childImageSharp {
@@ -77,9 +77,9 @@ interface Post {
       tags: string[];
       title: string;
       imgAlt: string;
-      description: string;
+      affiliateUrl: string;
       publishedDate: string;
-      url: string;
+      urls: string;
       img: { childImageSharp: { fluid: FluidObject } };
     };
   };
@@ -102,13 +102,12 @@ const Home: FunctionComponent<Home> = ({ data }) => {
   console.log(data,'data')
   const mapPostData = ({ node }: { node: Post["node"] }) => ({
     title: node.frontmatter.title,
-    summary: node.frontmatter.description,
+    summary: node.frontmatter.affiliateUrl,
     href: node.fields.slug,
     img: node.frontmatter.img.childImageSharp.fluid,
     imgAlt: node.frontmatter.imgAlt,
     tags: node.frontmatter.tags,
     publishedDate: new Date(node.frontmatter.publishedDate),
-    url: node.frontmatter.url
   });
   const featuredPostData: PostSnippet[] = data.featuredPosts.edges.map(
     mapPostData
@@ -117,7 +116,6 @@ const Home: FunctionComponent<Home> = ({ data }) => {
   return (
     <>
       <SEO title="Home" image="/logo.png"/>
-      {console.log(recentPostData,'recentPostData')}
       <Layout>
         <FeaturePosts featurePosts={featuredPostData} />
         <RecentPosts recentPosts={recentPostData} />

@@ -41,17 +41,16 @@ export const PostListItem: FunctionComponent<PostSnippet> = ({
               </span>
             ))}
           </div>
-          {console.log(url, 'url')}
           {/* <a href={href}>
             <p className="mt-3 text-base leading-6 text-gray-500">{summary}</p>
           </a> */}
-          <p dangerouslySetInnerHTML={{ __html: summary }} />
+          {/* <p dangerouslySetInnerHTML={{ __html: summary }} /> */}
         </div>
-        {/* <div className="mt-4">
-          <a href={href} className="block font-medium tracking-wide">
-            Read More
+        <div className="mt-4">
+          <a href={summary} className="block font-medium tracking-wide">
+            Buy Now
           </a>
-        </div> */}
+        </div>
       </div>
     </div>
   );

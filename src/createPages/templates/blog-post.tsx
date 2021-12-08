@@ -14,7 +14,7 @@ interface QueryData {
       };
       imgAlt: string;
       publishedDate: string;
-      description: string;
+      affiliateUrl: string;
     };
   };
 }
@@ -30,7 +30,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
-        description
+        affiliateUrl
         tags
         img {
           childImageSharp {
@@ -55,7 +55,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            description
+            affiliateUrl
             tags
             img {
               childImageSharp {
@@ -83,7 +83,7 @@ export const Page: FunctionComponent<Page> = ({ data }) => {
         title,
         tags,
         imgAlt,
-        description,
+        affiliateUrl,
         img: {
           childImageSharp: { fluid: img },
         },
@@ -94,7 +94,7 @@ export const Page: FunctionComponent<Page> = ({ data }) => {
 
   return (
     <>
-      <SEO title={title} image={img.src} description={description} />
+      <SEO title={title} image={img.src} affiliateUrl={affiliateUrl} />
       <BlogPost
         title={title}
         tags={tags}

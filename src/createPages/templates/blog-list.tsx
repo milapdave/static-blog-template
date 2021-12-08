@@ -13,7 +13,7 @@ interface Post {
     };
     frontmatter: {
       title: string;
-      description: string;
+      affiliateUrl: string;
       tags: string[];
       img: { childImageSharp: { fluid: FluidObject } };
       imgAlt: string;
@@ -48,7 +48,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            description
+            affiliateUrl
             tags
             imgAlt
             publishedDate
@@ -69,7 +69,7 @@ export const pageQuery = graphql`
 export const Page: FunctionComponent<QueryData> = ({ data, pageContext }) => {
   const posts: PostSnippet[] = data.allMarkdownRemark.edges.map(({ node }) => ({
     title: node.frontmatter.title,
-    summary: node.frontmatter.description,
+    summary: node.frontmatter.affiliateUrl,
     href: node.fields.slug,
     img: node.frontmatter.img.childImageSharp.fluid,
     imgAlt: node.frontmatter.imgAlt,
@@ -81,7 +81,7 @@ export const Page: FunctionComponent<QueryData> = ({ data, pageContext }) => {
       <SEO
         title={`Page ${pageContext.currentPage}`}
         image={posts[0].img.src}
-        description={`Page ${pageContext.currentPage}`}
+        affiliateUrl={`Page ${pageContext.currentPage}`}
       />
       <Layout>
         <BlogList

@@ -6,7 +6,7 @@ import { join } from "path";
 // https://ogp.me/#types
 
 type SEO = {
-  description?: string;
+  affiliateUrl?: string;
   lang?: string;
   meta?: any;
   keywords?: any;
@@ -16,7 +16,7 @@ type SEO = {
 };
 
 export const SEO: React.FunctionComponent<SEO> = ({
-  description,
+  affiliateUrl,
   lang = "en",
   meta,
   keywords,
@@ -33,7 +33,7 @@ export const SEO: React.FunctionComponent<SEO> = ({
           siteMetadata {
             title
             siteUrl
-            description
+            affiliateUrl
           }
         }
       }
@@ -42,20 +42,20 @@ export const SEO: React.FunctionComponent<SEO> = ({
 
   const imagePath = image ? join(siteMetadata.siteUrl, image) : undefined;
 
-  const metaDescription = description || siteMetadata.description;
+  const metaAffiliateUrl = affiliateUrl || siteMetadata.affiliateUrl;
 
   const metaFinal = [
     {
-      name: `description`,
-      content: metaDescription,
+      name: `affiliateUrl`,
+      content: metaAffiliateUrl,
     },
     {
       property: `og:title`,
       content: title,
     },
     {
-      property: `og:description`,
-      content: metaDescription,
+      property: `og:affiliateUrl`,
+      content: metaAffiliateUrl,
     },
     {
       property: `og:type`,
@@ -74,8 +74,8 @@ export const SEO: React.FunctionComponent<SEO> = ({
       content: title,
     },
     {
-      name: `twitter:description`,
-      content: metaDescription,
+      name: `twitter:affiliateUrl`,
+      content: metaAffiliateUrl,
     },
   ];
 

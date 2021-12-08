@@ -2,7 +2,7 @@
 template: blog-post
 title: Habits of super learner
 publishedDate: 2020-08-14T12:00:28.345Z
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+affiliateUrl: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
   eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl vel pretium
   lectus quam. Enim neque volutpat ac tincidunt vitae semper quis lectus. At
   erat pellentesque adipiscing commodo elit at.

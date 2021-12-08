@@ -19,7 +19,7 @@ const data: MenuItem[] = [
     dropdownItems: [
       {
         label: "Service A",
-        description: "Service A description",
+        affiliateUrl: "Service A affiliateUrl",
         href: "/services/a",
         icon: (
           <svg
@@ -39,7 +39,7 @@ const data: MenuItem[] = [
       },
       {
         label: "Service B",
-        description: "Service B description",
+        affiliateUrl: "Service B affiliateUrl",
         href: "/services/b",
         icon: (
           <svg

@@ -23,7 +23,7 @@ export interface BlogPost {
   publishedDate: Date;
   featured: boolean;
   title: string;
-  description: string;
+  affiliateUrl: string;
   img: string;
   imgAlt?: string;
   slug: string;

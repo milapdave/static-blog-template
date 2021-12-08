@@ -2,7 +2,7 @@ import React, { useState, FunctionComponent } from "react";
 
 export interface DropdownItem {
   label: string;
-  description: string;
+  affiliateUrl: string;
   icon: JSX.Element;
   href: string;
 }
@@ -62,7 +62,7 @@ export const FlyoutMenu: FunctionComponent<MenuItemWithDropdown> = ({
           <div className="rounded-lg shadow-xs overflow-hidden">
             <div className="z-20 relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
               {dropdownItems.map(
-                ({ label: text, description, href, icon }, index) => (
+                ({ label: text, affiliateUrl, href, icon }, index) => (
                   <a
                     key={index}
                     href={href}
@@ -74,7 +74,7 @@ export const FlyoutMenu: FunctionComponent<MenuItemWithDropdown> = ({
                         {text}
                       </p>
                       <p className="text-sm leading-5 text-gray-500">
-                        {description}
+                        {affiliateUrl}
                       </p>
                     </div>
                   </a>

@@ -2,7 +2,7 @@
 template: blog-post
 title: Terminal commands that make you smile
 publishedDate: 2020-08-10T16:02:46.329Z
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+affiliateUrl: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
   eiusmod tempor incididunt ut labore et dolore magna aliqua.
 featured: false
 img: ../../static/images/keyboard-backlight.jpeg

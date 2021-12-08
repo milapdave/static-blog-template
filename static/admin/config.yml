@@ -21,8 +21,8 @@ collections:
       - {label: "Template", name: "template", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "publishedDate", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Url", name: "url", widget: "string"}
+      - {label: "AffiliateUrl", name: "affiliateUrl", widget: "string"}
+      - {label: "Url", name: "urls", widget: "string"}
       - {label: "Featured Post", name: "featured", widget: "boolean", default: false}
       - {label: "Featured Image", name: "img", widget: image}
       - {label: "Image Caption", name: "imgAlt", widget: string}

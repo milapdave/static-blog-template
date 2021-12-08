@@ -2,7 +2,7 @@
 template: blog-post
 title: How I completely change my life in a year
 publishedDate: 2020-06-10T16:02:46.329Z
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+affiliateUrl: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
   eiusmod tempor incididunt ut labore et dolore magna aliqua.
 featured: true
 img: ../../static/images/man-sunrise.jpeg
