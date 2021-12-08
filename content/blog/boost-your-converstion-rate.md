@@ -1,12 +1,13 @@
 ---
+urls: test
+featured: true
+img: ../../static/images/beach-seagull.jpeg
+imgAlt: Do you see a sea gull?
+url: test url
 template: blog-post
 title: Boost your conversion rate
 publishedDate: 2020-08-12T16:02:46.329Z
 description: <a href="#">asdasd</a>
-url: test url
-featured: true
-img: ../../static/images/beach-seagull.jpeg
-imgAlt: Do you see a sea gull?
 tags:
   - opinion
   - ocean
