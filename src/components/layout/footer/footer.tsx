@@ -21,7 +21,7 @@ export const Footer: FunctionComponent<Footer> = ({
 }) => {
   return (
     <div className="bg-white">
-      <div className="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+      <div className="mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
         <div className="flex justify-center md:order-2">
           {facebook && (
             <a href={facebook} className="text-gray-400 hover:text-gray-500">

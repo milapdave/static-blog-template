@@ -10,7 +10,6 @@ export const PostListItem: FunctionComponent<PostSnippet> = ({
   img,
   imgAlt,
   title,
-  url,
   tags,
   summary,
 }) => {
@@ -47,7 +46,7 @@ export const PostListItem: FunctionComponent<PostSnippet> = ({
           {/* <p dangerouslySetInnerHTML={{ __html: summary }} /> */}
         </div>
         <div className="mt-4">
-          <a href={summary} target="_blank" className="block font-medium tracking-wide">
+          <a href={summary} target="_blank" rel="noreferrer" className="block font-medium tracking-wide">
             Buy Now
           </a>
         </div>

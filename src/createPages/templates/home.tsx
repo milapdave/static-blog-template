@@ -79,7 +79,6 @@ interface Post {
       imgAlt: string;
       affiliateUrl: string;
       publishedDate: string;
-      urls: string;
       img: { childImageSharp: { fluid: FluidObject } };
     };
   };

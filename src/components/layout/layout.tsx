@@ -12,17 +12,17 @@ const menuItems: MenuItem[] = [
     label: "Home",
     href: "/",
   },
-  {
-    label: "Contact",
-    href: "/contact",
-  },
+  // {
+  //   label: "Contact",
+  //   href: "/contact",
+  // },
 ];
 
 const footer = {
   copyrightOwner: "Liimart",
   // linkedin: "https://www.linkedin.com/in/liimart/",
   // github: "https://github.com/yehjxraymond",
-  instagram: "https://www.instagram.com/liimart",
+  instagram: "https://www.instagram.com/liimartindia",
 };
 
 export const Layout: FunctionComponent = ({ children }) => {
