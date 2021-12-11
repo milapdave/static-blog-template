@@ -33,7 +33,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Template", name: "template", widget: "hidden", default: "page-post"}
+      - {label: "Template", name: "template", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "publishedDate", widget: "datetime"}
       - {label: "Featured Image", name: "img", widget: image}
