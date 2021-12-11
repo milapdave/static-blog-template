@@ -27,15 +27,4 @@ collections:
       - {label: "Image Caption", name: "imgAlt", widget: string}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: pages
-    label: Pages
-    folder: "content/page"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Template", name: "template", widget: "hidden", default: "blog-post"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "publishedDate", widget: "datetime"}
-      - {label: "Featured Image", name: "img", widget: image}
-      - {label: "Body", name: "body", widget: "markdown"}
 
