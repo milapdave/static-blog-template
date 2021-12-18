@@ -12,10 +12,14 @@ const menuItems: MenuItem[] = [
     label: "Home",
     href: "/",
   },
-  // {
-  //   label: "Contact",
-  //   href: "/contact",
-  // },
+  {
+    label: "Privacy Policy",
+    href: "/privacy-policy/",
+  },
+  {
+    label: "Affiliate Disclosure/",
+    href: "/affiliate-disclosure/",
+  },
 ];
 
 const footer = {

@@ -98,7 +98,6 @@ interface Home {
 }
 
 const Home: FunctionComponent<Home> = ({ data }) => {
-  console.log(data,'data')
   const mapPostData = ({ node }: { node: Post["node"] }) => ({
     title: node.frontmatter.title,
     summary: node.frontmatter.affiliateUrl,
