@@ -8,117 +8,13 @@ import { RecentPosts } from "../components/recentPosts";
 import { Pagination } from "../components/pagination";
 import { SEO } from "../components/seo";
 
-export const pageQuery = graphql`
-  {
-    featuredPosts: allMarkdownRemark(
-      limit: 4
-      sort: { fields: [frontmatter___publishedDate], order: DESC }
-      filter: { frontmatter: { featured: { eq: true } } }
-    ) {
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            tags
-            title
-            imgAlt
-            affiliateUrl
-            publishedDate
-            img {
-              childImageSharp {
-                fluid(maxWidth: 2400, quality: 90) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    recentPosts: allMarkdownRemark(
-      limit: 100
-      sort: { fields: [frontmatter___publishedDate], order: DESC }
-    ) {
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            tags
-            title
-            imgAlt
-            affiliateUrl
-            publishedDate
-            img {
-              childImageSharp {
-                fluid(maxWidth: 2400, quality: 90) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`;
-interface Post {
-  node: {
-    id: string;
-    fields: {
-      slug: string;
-    };
-    frontmatter: {
-      tags: string[];
-      title: string;
-      imgAlt: string;
-      affiliateUrl: string;
-      publishedDate: string;
-      img: { childImageSharp: { fluid: FluidObject } };
-    };
-  };
-}
-
-interface QueryData {
-  featuredPosts: {
-    edges: Post[];
-  };
-  recentPosts: {
-    edges: Post[];
-  };
-}
-
-interface Home {
-  data: QueryData;
-}
 
 const Home: FunctionComponent<Home> = ({ data }) => {
-  console.log(data,'data')
-  const mapPostData = ({ node }: { node: Post["node"] }) => ({
-    title: node.frontmatter.title,
-    summary: node.frontmatter.affiliateUrl,
-    href: node.fields.slug,
-    img: node.frontmatter.img.childImageSharp.fluid,
-    imgAlt: node.frontmatter.imgAlt,
-    tags: node.frontmatter.tags,
-    publishedDate: new Date(node.frontmatter.publishedDate),
-  });
-  const featuredPostData: PostSnippet[] = data.featuredPosts.edges.map(
-    mapPostData
-  );
-  const recentPostData: PostSnippet[] = data.recentPosts.edges.map(mapPostData);
   return (
     <>
       <SEO title="Home" image="/logo.png"/>
       <Layout>
-        {/* <FeaturePosts featurePosts={featuredPostData} /> */}
-        {/* <RecentPosts recentPosts={recentPostData} /> */}
-        {/* <Pagination next="/page/2" /> */}
+        
       </Layout>
     </>
   );

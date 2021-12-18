@@ -1,7 +1,7 @@
-const siteName = "Sample Blog";
-const siteShortName = "Sample Blog";
+const siteName = "Liimart India";
+const siteShortName = "Liimart India";
 const siteUrl = "https://geek.sg/";
-const siteAffiliateUrl = "Sample blog template";
+const siteAffiliateUrl = "Liimart India template";
 const siteKeyword = "";
 const siteLogo = "logo.png";
 const siteLogoFolder = `static/${siteLogo}`;
