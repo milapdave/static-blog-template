@@ -1,8 +1,7 @@
 ---
 template: blog-post
 title: " XP-PEN Deco Mini 7 Graphics Tablet 17.78 cm x 11.09 cm (7 x 4.37 Inch)
-  Pen Tablet with 8192 Levels Pressure Sensitivity Battery-Free Stylus, 6
-  Customizable Shortcut Keys & Android Support "
+  Pen Tablet"
 publishedDate: 2021-12-26T05:52:32.418Z
 affiliateUrl: https://amzn.to/3mA9WBn
 featured: false
