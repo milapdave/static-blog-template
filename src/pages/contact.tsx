@@ -59,7 +59,10 @@ export const NotFound: FunctionComponent = () => {
               <h2 className="text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl sm:leading-10">
                 Contact Me
               </h2>
-              <form
+              <br />
+              <br />
+              <a href="mailto:liimartindia@gmail.com">liimartindia@gmail.com</a>
+              {/* <form
                 name={FORM_NAME}
                 data-netlify="true"
                 onSubmit={handleSubmit}
@@ -175,7 +178,7 @@ export const NotFound: FunctionComponent = () => {
                     </button>
                   </span>
                 </div>
-              </form>
+              </form> */}
             </div>
           </div>
         </div>

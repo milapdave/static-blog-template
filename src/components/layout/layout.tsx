@@ -13,12 +13,8 @@ const menuItems: MenuItem[] = [
     href: "/",
   },
   {
-    label: "Privacy Policy",
-    href: "/privacy-policy/",
-  },
-  {
-    label: "Affiliate Disclosure/",
-    href: "/affiliate-disclosure/",
+    label: "Contact",
+    href: "/contact",
   },
 ];
 
