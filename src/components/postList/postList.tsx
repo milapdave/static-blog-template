@@ -14,7 +14,7 @@ export const PostListItem: FunctionComponent<PostSnippet> = ({
   summary,
 }) => {
   return (
-    <div className="flex px-14 flex-col rounded-lg overflow-hidden  mb-16 sm:mb-16">
+    <div className="flex px-5 flex-col rounded-lg overflow-hidden  mb-16 sm:mb-16">
       <div className="mb-6 blogthum">
         <a href={href}>
           <Image
@@ -57,7 +57,7 @@ export const PostListItem: FunctionComponent<PostSnippet> = ({
 
 export const PostList: FunctionComponent<PostList> = ({ posts }) => {
   return (
-    <div className="mt-3 grid gap-5 xl:gap-10 max-w-lg mx-auto grid-cols-1 md:grid-cols-3 md:max-w-none">
+    <div className="mt-3 grid gap-5 xl:gap-5 max-w-lg mx-auto grid-cols-1 md:grid-cols-3 md:max-w-none">
       {posts.map((post, index) => (
         <PostListItem {...post} key={index} />
       ))}
